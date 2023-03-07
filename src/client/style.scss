@@ -1,0 +1,40 @@
+/** 全局样式入口 */
+
+// 批量导入时，样式丢失
+@use 'element-plus/theme-chalk/el-message.css';
+@use 'element-plus/theme-chalk/el-message-box.css';
+@use 'element-plus/theme-chalk/el-notification.css';
+
+// 初始化 内外边距
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // 元素的总高度和宽度包含内边距和边框(padding 与 border)
+    -webkit-tap-highlight-color: transparent; // 禁用点击高亮背景   =》当用户点击iOS的Safari浏览器中的a链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
+}
+// 链接不显示下划线
+a,
+.router-link-active {
+    text-decoration: none;
+}
+
+// 滚动条配置
+::-webkit-scrollbar {
+    // 定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    // 定义滚动条轨道
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    // 定义滑块
+    background-color: #90939366;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #909393;
+}
